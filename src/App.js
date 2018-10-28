@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Table1 from './components/Table1'
+
+
+var data = [
+  {id: 1, name: 'Gob', value: '2'},
+  {id: 2, name: 'Buster', value: '5'},
+  {id: 3, name: 'George Michael', value: '4'}
+];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <p className="Table-header">Basic Table</p>
+        <Table1 data={data}/>
       </div>
     );
   }
